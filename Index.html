@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <style>
+    /* ======= ESTILOS GENERALES ======= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a9111, #49bd32, #000000);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ======= HEADER ======= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* ======= HERO SECTION ======= */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1.3s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .btn-primary {
+      background: #ffcc00;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #ffd633;
+      transform: scale(1.05);
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ======= SECCIÓN DE CARDS ======= */
+    .cards-section {
+      padding: 4rem 2rem;
+      background: #fff;
+      color: #000;
+      text-align: center;
+    }
+
+    .cards-section h3 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #167c09;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 3px  25.5px rgba(1, 54, 8, 0.521);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h4 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: #062907;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .acciones a {
+      display: inline-block;
+      background: #068316;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .acciones a:hover {
+      background: #f8cc07;
+    }
+
+    /* ======= FOOTER ======= */
+
+    html, body {
+    height: 100%;
+  margin: 0;
+}
+
+
+main {
+  flex: 1; /* Hace que el contenido empuje el footer hacia abajo */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #bbb;
+}
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Dirección de Gestión de la Calidad y Desarrollo Docente</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="/Repositorio.html">Sistemas • UCSD</a></li>
+        <li><a href="/Equippo.html">Equipo • DGCDD</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Bienvenido al Repositorio</h2>
+    <h2>DIRECCIÓN DE GESTIÓN DE LA CALIDAD Y DESARROLLO DOCENTE</h2>
+    <p>
+      Un espacio digital para centralizar documentos, proyectos y recursos de la dirección.
+    </p>
+    <a href="#repositorio" class="btn-primary">Acceder</a>
+  </section>
+
+  <!-- SECCIÓN DE CARDS -->
+  <section class="cards-section" id="repositorio">
+    <h3>Accesos Rápidos</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>General Reportes</h4>
+        <p>Ingresa a los portales disponibles para generar el reporte correspondiente.</p>
+        <div class="acciones">
+          <a href="http://172.16.35.19/reports/browse/Reportes_Actualizados/evaluacionuniversitaria_shared">Abrir</a>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Documentos Clave</h4>
+        <p>Encuentra formatos, cartas y archivos institucionales.</p>
+        <div class="acciones">
+          <a href="http://172.16.35.19/reports/browse/Reportes_Actualizados/evaluacionuniversitaria_shared">Ver más</a>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Resultados Evaluación</h4>
+        <p>Consulta los reportes e informes finales obtenidos de la evaluaciones aplicadas.</p>
+        <div class="acciones">
+          <a href="#">Explorar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <p>© Dirección de Gestión de la Calidad y Desarrollo Docente | Contacto: direcciongcdd@ucsd.edu.do</p>
+  </footer>
+
+</body>
+</html>
